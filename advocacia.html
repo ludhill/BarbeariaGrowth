@@ -1,253 +1,940 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketing e Gestão para Advocacia - Alcance a Excelência Jurídica</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <script src="https://cdn.tailwindcss.com"></script>  
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        // Nova paleta de cores adaptada
-                        'azul-profundo': '#1A193B',   // Cor de fundo principal
-                        'dourado': '#D4A24E',         // Cor de destaque para títulos, logo e CTAs
-                        'dourado-hover': '#EAC478',    // Variação mais clara para links e efeitos hover
-                        'texto-branco': '#FFFFFF',      // Cor principal dos textos e ícones
-                        'texto-cinza': '#E5E7EB'       // Um tom de cinza claro para textos secundários
-                    }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Marketing e Gestão para Advocacia - Alcance a Excelência Jurídica</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            // Nova paleta de cores adaptada
+                            "azul-profundo": "#1A193B", // Cor de fundo principal
+                            dourado: "#D4A24E", // Cor de destaque para títulos, logo e CTAs
+                            "dourado-hover": "#EAC478", // Variação mais clara para links e efeitos hover
+                            "texto-branco": "#FFFFFF", // Cor principal dos textos e ícones
+                            "texto-cinza": "#E5E7EB", // Um tom de cinza claro para textos secundários
+                        },
+                    },
+                },
+            };
+        </script>
+
+        <style>
+            /* Estilos personalizados adicionais */
+            .hero-image {
+                /* SUGESTÃO: Manter uma imagem adequada ao tema jurídico, como um escritório moderno. */
+                background: linear-gradient(rgba(26, 25, 59, 0.8), rgba(26, 25, 59, 0.8)), url("https://images.unsplash.com/photo-1589216532372-1c2a36790049?q=80&w=2070&auto=format&fit=crop");
+                background-size: cover;
+                background-position: center;
+                height: 60vh;
+            }
+
+            .benefit-card {
+                transition: all 0.3s ease;
+            }
+
+            .benefit-card:hover {
+                transform: translateY(-5px);
+                border-color: rgba(212, 162, 78, 0.5); /* Dourado com 50% de opacidade */
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            }
+            @keyframes brilho-pulsante {
+                0%,
+                100% {
+                    filter: brightness(1);
+                }
+                50% {
+                    filter: brightness(1.4);
                 }
             }
-        }
-    </script>
-    
-    <style>
-        /* Estilos personalizados adicionais */
-        .hero-image {
-            /* SUGESTÃO: Manter uma imagem adequada ao tema jurídico, como um escritório moderno. */
-            background: linear-gradient(rgba(26, 25, 59, 0.8), rgba(26, 25, 59, 0.8)), url('https://images.unsplash.com/photo-1589216532372-1c2a36790049?q=80&w=2070&auto=format&fit=crop'); 
-            background-size: cover;
-            background-position: center;
-            height: 60vh;
-        }
-        
-        .benefit-card {
-            transition: all 0.3s ease;
-        }
-        
-        .benefit-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(212, 162, 78, 0.5); /* Dourado com 50% de opacidade */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        @keyframes brilho-pulsante {
-          0%, 100% {
-            filter: brightness(1);
-          }
-          50% {
-            filter: brightness(1.4);
-          }
-        }
-        
-        .icone-animado {
-          animation: brilho-pulsante 2s infinite ease-in-out;
-        }
-    </style>
-</head>
 
-<body class="font-poppins antialiased bg-azul-profundo text-texto-cinza">
+            .icone-animado {
+                animation: brilho-pulsante 2s infinite ease-in-out;
+            }
+        </style>
+    </head>
 
-    <section class="hero-image flex items-center justify-center text-texto-branco">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Advocacia de Resultado: Gestão e Marketing</h1>
-            <h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-8">Transforme seu escritório em uma referência de mercado, com previsibilidade e crescimento sustentável</h2>
-            <a href="#contato" class="bg-dourado hover:bg-dourado-hover transition-all text-azul-profundo font-bold py-3 px-8 rounded-full inline-block">
-                Quero alavancar meu escritório
-            </a>
-        </div>
-    </section>
-
-    <section class="py-16 md:py-24">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-texto-branco mb-6">Nosso Diferencial</h2>
-                <p class="text-lg text-texto-cinza mb-8">Enquanto a maioria das agências de marketing jurídico se concentra apenas em atrair contatos, nós implementamos uma gestão completa da jornada do seu cliente. Do primeiro contato à fidelização e à expansão dos serviços contratados, garantindo um crescimento sólido e ético para o seu escritório.</p>
-                <div class="flex justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" class="rounded-lg shadow-lg">
-                    <style>
-                      :root {
-                        --azul-profundo: #1A193B;
-                        --dourado: #D4A24E;
-                        --texto-branco: #FFFFFF;
-                        --texto-cinza: #E5E7EB;
-                      }
-                
-                      .bg { fill: var(--azul-profundo); }
-                      .title { fill: var(--dourado); }
-                      .text { fill: var(--texto-branco); }
-                      .sec-text { fill: var(--texto-cinza); }
-                
-                      .icone-animado {
-                        animation: brilho-pulsante 2s infinite ease-in-out;
-                        filter: brightness(1);
-                      }
-                
-                      @keyframes brilho-pulsante {
-                        0%, 100% { filter: brightness(1); }
-                        50% { filter: brightness(1.4); }
-                      }
-                    </style>
-                
-                    <rect width="100%" height="100%" class="bg"/>
-                    <text x="50%" y="30%" text-anchor="middle" class="title" font-size="20">Nossa Abordagem Completa</text>
-                    <!-- Exemplo de ícone animado -->
-                    <circle cx="50" cy="100" r="20" class="icone-animado"/>
-                  </svg>
-                </div>
-
+    <body class="font-poppins antialiased bg-azul-profundo text-texto-cinza">
+        <section class="hero-image flex items-center justify-center text-texto-branco">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Advocacia de Resultado: Gestão e Marketing</h1>
+                <h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-8">Transforme seu escritório em uma referência de mercado, com previsibilidade e crescimento sustentável</h2>
+                <a href="#contato" class="bg-dourado hover:bg-dourado-hover transition-all text-azul-profundo font-bold py-3 px-8 rounded-full inline-block">
+                    Quero alavancar meu escritório
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="py-16 md:py-24 bg-azul-profundo">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-texto-branco mb-12">O Que Oferecemos Para Sua Advocacia</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
-                    <div class="text-4xl mb-4">⚖️</div>
-                    <h3 class="text-xl font-semibold text-texto-branco mb-3">Construção de Autoridade</h3>
-                    <p class="text-texto-cinza text-justify">Fortalecemos a percepção de valor do seu escritório, convertendo expertise jurídica em autoridade de mercado, o que aumenta a confiança e a retenção de clientes.</p>
-                </div>
-                
-                <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
-                    <div class="text-4xl mb-4">📂</div>
-                    <h3 class="text-xl font-semibold text-texto-branco mb-3">Portfólio de Serviços Estratégico</h3>
-                    <p class="text-texto-cinza text-justify">Além da captação ética, estruturamos seu portfólio de serviços para identificar oportunidades de cross-selling e up-selling, aumentando o LTV (Lifetime Value) de cada cliente.</p>
-                </div>
-                
-                <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
-                    <div class="text-4xl mb-4">🎯</div>
-                    <h3 class="text-xl font-semibold text-texto-branco mb-3">Marketing Jurídico de Conteúdo</h3>
-                    <p class="text-texto-cinza text-justify">Desenvolvemos estratégias de conteúdo que posicionam você como autoridade, gerando um fluxo constante de consultas qualificadas e respeitando o Código de Ética da OAB.</p>
-                </div>
-                
-                <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
-                    <div class="text-4xl mb-4">👥</div>
-                    <h3 class="text-xl font-semibold text-texto-branco mb-3">Gestão do Relacionamento com Cliente</h3>
-                    <p class="text-texto-cinza text-justify">Implementamos sistemas de CRM para um acompanhamento proativo de casos e clientes, automatizando comunicações importantes e fortalecendo a relação de confiança.</p>
-                </div>
-                
-                <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
-                    <div class="text-4xl mb-4">💲</div>
-                    <h3 class="text-xl font-semibold text-texto-branco mb-3">Previsibilidade de Honorários</h3>
-                    <p class="text-texto-cinza text-justify">Com nossa metodologia, seu escritório passa a ter uma receita mais previsível, permitindo um planejamento financeiro seguro e um crescimento escalável e sustentável.</p>
-                </div>
-                
-                <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
-                    <div class="text-4xl mb-4">🖥️</div>
-                    <h3 class="text-xl font-semibold text-texto-branco mb-3">BI Jurídico e Métricas</h3>
-                    <p class="text-texto-cinza text-justify">Tenha acesso a um dashboard com os KPIs (Key Performance Indicators) essenciais do seu escritório, facilitando a tomada de decisões estratégicas baseadas em dados.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-texto-branco mb-6">Nosso Diferencial</h2>
+                    <p class="text-lg text-texto-cinza mb-8">
+                        Enquanto a maioria das agências de marketing jurídico se concentra apenas em atrair contatos, nós implementamos uma gestão completa da jornada do seu cliente. Do primeiro contato à fidelização e à expansão dos
+                        serviços contratados, garantindo um crescimento sólido e ético para o seu escritório.
+                    </p>
+                    <div class="flex justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" class="rounded-lg shadow-lg">
+                            <style>
+                                :root {
+                                    --azul-profundo: #1a193b;
+                                    --dourado: #d4a24e;
+                                    --texto-branco: #ffffff;
+                                    --texto-cinza: #e5e7eb;
+                                }
 
-    <section class="py-16 md:py-24">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-texto-branco mb-12">Nossa Abordagem Completa</h2>
-                
-                <div class="bg-azul-profundo border border-dourado/[.2] rounded-xl shadow-lg overflow-hidden">
-                     <svg viewBox="0 0 500 500">
-                        <circle cx="250" cy="250" r="200" stroke="#D4A24E" stroke-width="2" fill="none"/>
-                        
-                        <!-- Brilho Pulsante -->
-                        <circle class="pulsar" cx="250" cy="50" r="6" fill="#FFD580"/>
-                        <circle class="pulsar" cx="450" cy="250" r="6" fill="#FFD580"/>
-                        <circle class="pulsar" cx="250" cy="450" r="6" fill="#FFD580"/>
-                        <circle class="pulsar" cx="50" cy="250" r="6" fill="#FFD580"/>
-                    
-                        <!-- Ícones Jurídicos (simplificados como shapes) -->
-                        <rect class="icon" x="235" y="140" width="30" height="40"/> <!-- Contrato -->
-                        <line class="icon" x1="320" y1="170" x2="360" y2="170"/> <!-- Martelo -->
-                        <rect class="icon" x="360" y="235" width="35" height="25"/> <!-- Pasta -->
-                        <polygon class="icon" points="325,320 350,320 350,300 325,300"/> <!-- Prédio jurídico -->
-                        <circle class="icon" cx="250" cy="360" r="15"/> <!-- Pessoa -->
-                        <rect class="icon" x="165" y="330" width="40" height="25"/> <!-- Livro -->
-                        <line class="icon" x1="150" y1="250" x2="180" y2="250"/> <!-- Mãos dadas -->
-                        <line class="icon" x1="200" y1="170" x2="170" y2="170"/> <!-- Balança -->
-                      </svg>
-                    
-                    <div class="p-8 md:p-10">
-                        <h3 class="text-2xl font-semibold text-texto-branco mb-4">Por que somos diferentes?</h3>
-                        <p class="text-texto-cinza mb-6">A maioria das agências entrega apenas contatos e considera o trabalho finalizado. Nós atuamos como parceiros estratégicos, entendendo que o sucesso se constrói na gestão de todo o ciclo de vida do cliente.</p>
-                        
-                        <ul class="space-y-4">
-                            <li class="flex items-start">
-                                <div class="flex-shrink-0 h-6 w-6 bg-dourado rounded-full flex items-center justify-center text-azul-profundo font-bold mr-3 mt-1">✓</div>
-                                <span class="text-texto-cinza">Gerenciamos todas as etapas: da prospecção ética à fidelização e identificação de novas oportunidades na carteira de clientes.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="flex-shrink-0 h-6 w-6 bg-dourado rounded-full flex items-center justify-center text-azul-profundo font-bold mr-3 mt-1">✓</div>
-                                <span class="text-texto-cinza">Estruturamos uma comunicação estratégica, nutrindo o relacionamento com informações sobre o andamento de processos e conteúdos de valor.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="flex-shrink-0 h-6 w-6 bg-dourado rounded-full flex items-center justify-center text-azul-profundo font-bold mr-3 mt-1">✓</div>
-                                <span class="text-texto-cinza">Analisamos o Custo de Aquisição de Cliente (CAC) e o LTV para otimizar seus investimentos em marketing e garantir o máximo retorno.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <div class="flex-shrink-0 h-6 w-6 bg-dourado rounded-full flex items-center justify-center text-azul-profundo font-bold mr-3 mt-1">✓</div>
-                                <span class="text-texto-cinza">Somos parceiros de negócio, não apenas prestadores de serviço.</span>
-                            </li>
-                        </ul>
+                                .bg {
+                                    fill: var(--azul-profundo);
+                                }
+                                .title {
+                                    fill: var(--dourado);
+                                }
+                                .text {
+                                    fill: var(--texto-branco);
+                                }
+                                .sec-text {
+                                    fill: var(--texto-cinza);
+                                }
+
+                                .icone-animado {
+                                    animation: brilho-pulsante 2s infinite ease-in-out;
+                                    filter: brightness(1);
+                                }
+
+                                @keyframes brilho-pulsante {
+                                    0%,
+                                    100% {
+                                        filter: brightness(1);
+                                    }
+                                    50% {
+                                        filter: brightness(1.4);
+                                    }
+                                }
+                            </style>
+
+                            <rect width="100%" height="100%" class="bg" />
+                            <text x="50%" y="30%" text-anchor="middle" class="title" font-size="20">Nossa Abordagem Completa</text>
+                            <!-- Exemplo de ícone animado -->
+                            <circle cx="50" cy="100" r="20" class="icone-animado" />
+                        </svg>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contato" class="py-16 md:py-24 bg-azul-profundo text-texto-branco">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para Elevar o Nível da Sua Advocacia?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto text-texto-cinza">Agende uma sessão estratégica gratuita e descubra como podemos aplicar nossa metodologia para construir um escritório mais sólido, rentável e com autoridade no mercado.</p>
-            <a href="https://wa.me/558491259602" rel="noopener noreferrer" target="_blank" class="bg-dourado hover:bg-dourado-hover transition-all text-azul-profundo font-bold py-3 px-8 rounded-full inline-block text-lg">
-                Agendar Sessão Estratégica
-            </a>
-        </div>
-    </section>
+        <section class="py-16 md:py-24 bg-azul-profundo">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-texto-branco mb-12">O Que Oferecemos Para Sua Advocacia</h2>
 
-    <footer class="bg-azul-profundo text-texto-cinza py-8 border-t border-dourado/[.2]">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-                <div class="mb-4 md:mb-0">
-                    <h3 class="text-xl font-bold mb-2 text-texto-branco">Advocacia de Resultado</h3>
-                    <p>Estratégia e Gestão para Escritórios de Advocacia</p>
-                </div>
-                <div class="text-sm">
-                    © 2025 Advocacia de Resultado. Todos os direitos reservados.
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
+                        <div class="text-4xl mb-4">⚖️</div>
+                        <h3 class="text-xl font-semibold text-texto-branco mb-3">Construção de Autoridade</h3>
+                        <p class="text-texto-cinza text-justify">Fortalecemos a percepção de valor do seu escritório, convertendo expertise jurídica em autoridade de mercado, o que aumenta a confiança e a retenção de clientes.</p>
+                    </div>
+
+                    <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
+                        <div class="text-4xl mb-4">📂</div>
+                        <h3 class="text-xl font-semibold text-texto-branco mb-3">Portfólio de Serviços Estratégico</h3>
+                        <p class="text-texto-cinza text-justify">
+                            Além da captação ética, estruturamos seu portfólio de serviços para identificar oportunidades de cross-selling e up-selling, aumentando o LTV (Lifetime Value) de cada cliente.
+                        </p>
+                    </div>
+
+                    <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
+                        <div class="text-4xl mb-4">🎯</div>
+                        <h3 class="text-xl font-semibold text-texto-branco mb-3">Marketing Jurídico de Conteúdo</h3>
+                        <p class="text-texto-cinza text-justify">Desenvolvemos estratégias de conteúdo que posicionam você como autoridade, gerando um fluxo constante de consultas qualificadas e respeitando o Código de Ética da OAB.</p>
+                    </div>
+
+                    <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
+                        <div class="text-4xl mb-4">👥</div>
+                        <h3 class="text-xl font-semibold text-texto-branco mb-3">Gestão do Relacionamento com Cliente</h3>
+                        <p class="text-texto-cinza text-justify">Implementamos sistemas de CRM para um acompanhamento proativo de casos e clientes, automatizando comunicações importantes e fortalecendo a relação de confiança.</p>
+                    </div>
+
+                    <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
+                        <div class="text-4xl mb-4">💲</div>
+                        <h3 class="text-xl font-semibold text-texto-branco mb-3">Previsibilidade de Honorários</h3>
+                        <p class="text-texto-cinza text-justify">Com nossa metodologia, seu escritório passa a ter uma receita mais previsível, permitindo um planejamento financeiro seguro e um crescimento escalável e sustentável.</p>
+                    </div>
+
+                    <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
+                        <div class="text-4xl mb-4">🖥️</div>
+                        <h3 class="text-xl font-semibold text-texto-branco mb-3">BI Jurídico e Métricas</h3>
+                        <p class="text-texto-cinza text-justify">Tenha acesso a um dashboard com os KPIs (Key Performance Indicators) essenciais do seu escritório, facilitando a tomada de decisões estratégicas baseadas em dados.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </section>
 
-    <script>
-        // Script para suavizar a rolagem para âncoras
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center text-texto-branco mb-12">Nossa Abordagem Completa</h2>
+
+                    <div class="bg-azul-profundo border border-dourado/[.2] rounded-xl shadow-lg overflow-hidden">
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="1024.000000pt" height="1536.000000pt" viewBox="0 0 1024.000000 1536.000000" preserveAspectRatio="xMidYMid meet" class="rounded-lg shadow-lg">
+                            <circle cx="250" cy="250" r="200" stroke="#D4A24E" stroke-width="2" fill="none" />
+
+                            <!-- Brilho Pulsante -->
+                            <circle class="pulsar" cx="250" cy="50" r="6" fill="#FFD580" />
+                            <circle class="pulsar" cx="450" cy="250" r="6" fill="#FFD580" />
+                            <circle class="pulsar" cx="250" cy="450" r="6" fill="#FFD580" />
+                            <circle class="pulsar" cx="50" cy="250" r="6" fill="#FFD580" />
+
+                            <!-- Ícones Jurídicos (simplificados como shapes) -->
+                            <rect class="icon" x="235" y="140" width="30" height="40" />
+                            <!-- Contrato -->
+                            <line class="icon" x1="320" y1="170" x2="360" y2="170" />
+                            <!-- Martelo -->
+                            <rect class="icon" x="360" y="235" width="35" height="25" />
+                            <!-- Pasta -->
+                            <polygon class="icon" points="325,320 350,320 350,300 325,300" />
+                            <!-- Prédio jurídico -->
+                            <circle class="icon" cx="250" cy="360" r="15" />
+                            <!-- Pessoa -->
+                            <rect class="icon" x="165" y="330" width="40" height="25" />
+                            <!-- Livro -->
+                            <line class="icon" x1="150" y1="250" x2="180" y2="250" />
+                            <!-- Mãos dadas -->
+                            <line class="icon" x1="200" y1="170" x2="170" y2="170" />
+                            <!-- Balança -->
+
+                            <g transform="translate(0.000000,1536.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                                <path
+                                    d="M0 7680 l0 -7680 5120 0 5120 0 0 7680 0 7680 -5120 0 -5120 0 0
+-7680z m4830 6228 l0 -131 23 20 c37 34 63 43 122 43 69 0 115 -20 150 -66 45
+-58 58 -102 53 -174 -8 -105 -58 -179 -145 -215 -64 -27 -125 -15 -175 33
+l-28 26 0 -27 c0 -26 -2 -27 -50 -27 l-50 0 0 318 c0 175 3 322 7 325 3 4 26
+7 50 7 l43 0 0 -132z m1720 -193 l0 -325 -27 0 c-16 0 -38 -3 -50 -6 -21 -6
+-23 -3 -23 36 l0 42 -25 -31 c-15 -17 -47 -37 -76 -46 -44 -15 -57 -15 -97 -4
+-63 18 -117 68 -142 135 -24 66 -25 94 -4 163 16 56 69 123 115 147 16 8 56
+14 92 14 52 0 71 -5 101 -25 l36 -24 0 118 c0 65 3 121 7 124 3 4 26 7 50 7
+l43 0 0 -325z m-5012 280 c13 -11 73 -109 207 -333 33 -56 63 -101 68 -102 4
+0 7 101 7 225 l0 225 55 0 55 0 0 -310 0 -310 -69 0 -69 0 -44 73 c-25 39 -85
+137 -134 217 l-89 145 -3 -217 -2 -218 -55 0 -55 0 0 313 0 314 58 -5 c31 -2
+63 -10 70 -17z m2955 -147 c61 -178 150 -413 167 -440 9 -16 4 -18 -58 -18
+l-68 0 -23 70 -22 70 -123 0 -123 0 -19 -67 -20 -68 -61 -3 -62 -3 19 53 c10
+29 44 123 75 208 31 85 72 201 92 258 l36 102 67 0 66 0 57 -162z m-2136 -27
+c165 -83 165 -338 1 -422 -116 -59 -254 -14 -313 104 -66 132 2 292 143 338
+41 13 124 3 169 -20z m474 4 c36 -18 89 -64 89 -76 0 -4 -21 -19 -47 -33 -36
+-21 -48 -24 -55 -14 -4 7 -8 16 -8 20 0 13 -58 38 -87 38 -33 0 -73 -25 -73
+-46 0 -16 41 -36 120 -58 109 -31 160 -86 146 -160 -21 -109 -180 -160 -304
+-97 -36 18 -90 76 -80 86 4 4 98 45 104 45 2 0 4 -6 4 -13 0 -25 38 -49 83
+-54 51 -6 87 9 87 37 0 31 -26 47 -114 74 -67 21 -90 33 -115 61 -58 66 -37
+145 51 190 44 22 62 26 109 22 31 -3 71 -13 90 -22z m439 0 c34 -18 82 -73 74
+-86 -3 -5 -22 -18 -42 -28 l-36 -18 -32 33 c-25 27 -39 34 -71 34 -44 0 -63
+-14 -63 -46 0 -23 40 -44 110 -59 45 -9 115 -49 135 -77 20 -30 19 -93 -2
+-130 -28 -46 -76 -70 -152 -76 -82 -5 -157 22 -196 73 l-25 34 52 24 c47 21
+54 22 59 8 18 -44 81 -68 134 -51 71 24 52 69 -42 101 -144 47 -183 81 -183
+159 0 42 4 52 35 79 20 17 48 33 63 37 15 3 32 8 37 10 19 7 117 -7 145 -21z
+m478 -2 c66 -49 82 -108 82 -304 l0 -129 -55 0 c-30 0 -54 3 -54 8 5 30 -2 34
+-24 14 -45 -42 -134 -54 -190 -26 -81 41 -111 106 -82 181 30 78 151 128 246
+103 24 -7 46 -11 49 -9 10 8 -2 55 -19 72 -24 25 -114 26 -159 3 -33 -17 -34
+-17 -68 9 -29 22 -33 29 -23 42 14 16 60 42 99 54 45 15 169 4 198 -18z m3226
+3 c15 -9 38 -35 54 -58 26 -40 27 -46 30 -210 l4 -168 -57 0 c-35 0 -54 4 -50
+10 16 26 -10 27 -47 2 -34 -22 -53 -27 -103 -27 -52 0 -67 4 -98 28 -99 75
+-87 185 25 241 56 28 143 35 192 16 24 -9 26 -8 26 20 0 45 -42 73 -105 67
+-27 -2 -64 -10 -81 -17 -28 -12 -34 -11 -63 9 -18 13 -30 28 -28 34 5 17 49
+47 93 63 51 19 173 13 208 -10z m448 -2 c15 -8 30 -18 33 -24 12 -20 25 -10
+25 20 0 29 2 30 45 30 l46 0 -3 -259 -3 -259 -30 -44 c-20 -28 -49 -53 -85
+-71 -47 -25 -64 -28 -115 -24 -64 5 -114 25 -153 61 -47 42 -46 52 5 87 44 31
+47 31 57 14 26 -45 58 -65 105 -65 55 0 88 20 107 66 15 37 19 114 5 114 -5 0
+-15 -7 -22 -17 -51 -61 -190 -54 -251 14 -51 56 -65 192 -28 269 45 93 170
+135 262 88z m1060 12 c15 -3 35 -19 44 -35 l17 -29 39 31 c34 27 49 32 106 35
+58 3 71 1 96 -19 49 -38 56 -71 56 -259 l0 -170 -52 0 -53 0 3 112 c6 191 -11
+238 -84 238 -26 0 -43 -8 -65 -29 l-29 -29 0 -146 0 -146 -55 0 -55 0 0 155
+c0 142 -2 157 -20 175 -30 30 -76 26 -111 -9 l-29 -29 0 -146 0 -146 -55 0
+-55 0 2 223 3 222 53 3 52 3 0 -32 0 -33 30 29 c16 15 46 31 67 35 38 7 44 7
+95 -4z m-2917 -12 c58 -27 121 -104 133 -160 11 -54 1 -145 -20 -172 -55 -74
+-133 -122 -199 -122 -56 0 -128 29 -166 68 -116 116 -91 312 49 381 53 26 154
+29 203 5z m325 -21 c1 -32 3 -35 13 -23 27 35 71 60 103 60 34 0 34 -1 34 -45
+0 -43 -1 -44 -37 -51 -53 -9 -71 -21 -93 -57 -17 -27 -20 -51 -20 -164 l0
+-133 -55 0 -55 0 0 219 c0 245 -5 227 73 230 36 1 37 0 37 -36z m2089 23 c36
+-19 90 -80 107 -122 8 -19 14 -54 14 -79 l0 -45 -165 0 c-161 0 -165 -1 -165
+-21 0 -12 15 -36 34 -55 30 -30 40 -34 89 -34 46 0 61 5 87 27 l32 27 37 -20
+c48 -25 47 -51 -4 -86 -119 -84 -284 -49 -355 75 -25 44 -30 63 -30 122 0 73
+14 109 64 164 50 56 188 81 255 47z m-2289 -1146 l0 -340 -55 0 -55 0 0 334 0
+335 33 4 c17 2 42 5 55 5 l22 2 0 -340z m-2189 298 c55 -16 118 -73 145 -132
+13 -28 24 -56 24 -63 0 -6 -20 -18 -44 -26 l-44 -15 -32 40 c-35 43 -98 77
+-144 78 -41 0 -117 -45 -146 -87 -22 -32 -25 -47 -25 -123 0 -77 3 -91 27
+-127 65 -98 216 -98 294 1 l27 34 44 -21 c24 -12 43 -27 43 -34 0 -49 -95
+-145 -162 -164 -23 -7 -78 -12 -121 -12 -64 1 -86 6 -121 27 -123 72 -184 245
+-141 398 30 107 106 198 186 223 55 17 140 19 190 3z m2979 -123 l0 -75 60 0
+60 0 0 -45 0 -45 -60 0 -61 0 3 -127 3 -128 54 0 c51 0 55 -2 67 -30 22 -51
+18 -62 -30 -74 -93 -23 -155 -8 -192 46 -16 24 -20 51 -22 171 l-4 142 -37 0
+-36 0 3 45 c4 44 5 45 38 45 l34 0 0 64 0 63 53 10 c28 6 55 11 60 12 4 0 7
+-33 7 -74z m-2411 -75 c64 -32 117 -101 130 -167 21 -110 -9 -190 -94 -248
+-90 -62 -193 -58 -273 11 -61 52 -82 98 -82 184 0 79 13 119 56 169 58 69 182
+93 263 51z m331 -10 l0 -30 42 30 c34 25 51 30 96 30 49 0 58 -4 89 -35 l36
+-36 26 24 c39 37 65 47 118 47 58 0 105 -26 130 -72 15 -27 19 -63 21 -210 l4
+-178 -59 0 -58 0 3 97 c6 181 -11 237 -75 249 -27 5 -37 1 -63 -24 l-30 -30 0
+-146 0 -146 -60 0 -60 0 0 150 c0 147 -1 152 -25 175 -33 33 -70 32 -106 -4
+l-29 -29 0 -146 0 -146 -55 0 -55 0 0 224 0 225 28 4 c74 11 82 9 82 -23z
+m770 5 c0 -14 3 -25 6 -25 3 0 19 11 36 25 23 20 41 25 83 25 67 0 101 -12
+144 -53 50 -48 71 -100 71 -182 0 -108 -55 -205 -133 -234 -52 -20 -130 -14
+-171 14 l-36 24 0 -113 0 -113 -31 -7 c-17 -3 -43 -6 -58 -6 l-26 0 0 327 c0
+365 -5 341 73 342 38 1 42 -1 42 -24z m952 2 c69 -42 108 -113 108 -197 l0
+-50 -165 0 c-189 0 -194 -3 -126 -71 33 -33 45 -39 80 -39 46 0 73 11 108 43
+l23 20 39 -28 c39 -26 40 -28 24 -51 -31 -48 -98 -77 -187 -82 -70 -3 -87 0
+-126 20 -154 79 -146 359 13 437 60 30 159 29 209 -2z m856 9 c81 -42 102
+-102 102 -297 l0 -149 -55 0 c-41 0 -55 4 -55 15 0 11 -11 9 -52 -10 -129 -60
+-261 -3 -261 113 0 51 22 85 84 127 41 28 50 30 137 30 88 0 93 1 88 20 -3 11
+-6 25 -6 31 0 15 -45 34 -79 34 -15 0 -49 -11 -76 -24 l-48 -25 -39 31 -39 31
+23 24 c43 46 87 62 171 63 48 0 88 -5 105 -14z m-4559 -1030 c8 -9 11 -44 9
+-96 -2 -66 -7 -85 -20 -94 -13 -8 -23 -8 -35 0 -15 9 -19 28 -21 99 -3 91 2
+104 39 105 9 0 22 -6 28 -14z m-393 -193 c60 -77 70 -98 54 -118 -24 -29 -56
+-18 -92 33 -63 88 -73 109 -59 126 24 29 50 17 97 -41z m812 45 c7 -7 12 -18
+12 -25 0 -15 -107 -163 -118 -163 -14 0 -52 31 -52 42 0 6 25 44 55 85 55 72
+78 86 103 61z m2385 -24 c270 -61 439 -243 504 -541 41 -188 51 -217 109 -305
+43 -64 54 -88 49 -108 -8 -35 -87 -106 -138 -123 -40 -13 -42 -16 -48 -63 -23
+-178 -118 -318 -268 -394 -104 -52 -164 -60 -473 -60 -254 0 -278 1 -286 18
+-5 9 -12 78 -15 152 -7 163 -30 241 -114 381 -60 102 -105 207 -123 284 -16
+70 -14 209 5 279 51 191 218 381 396 453 110 44 278 55 402 27z m3822 -183
+c63 -37 120 -93 148 -145 22 -40 22 -51 25 -485 3 -501 3 -503 -71 -587 -73
+-83 -74 -83 -457 -84 -184 0 -351 -4 -370 -9 -28 -6 -72 -45 -204 -179 -95
+-96 -177 -172 -187 -172 -33 0 -40 35 -38 198 l1 157 -35 6 c-63 10 -116 54
+-148 124 -17 37 -19 74 -19 510 0 304 4 484 11 509 12 42 77 119 121 142 78
+40 115 43 653 43 l520 1 50 -29z m-6580 5 c121 -32 196 -84 256 -177 35 -55
+59 -139 59 -208 0 -73 -45 -201 -95 -272 -58 -83 -72 -113 -79 -173 -10 -86
+-12 -86 -226 -86 -134 0 -191 4 -202 13 -10 7 -18 33 -20 69 -4 49 -12 68 -66
+148 -81 119 -107 201 -106 330 0 83 4 101 27 148 39 75 87 124 159 163 102 54
+202 70 293 45z m623 -98 c26 -26 14 -57 -30 -79 -24 -12 -54 -29 -68 -39 -30
+-21 -65 -12 -75 20 -9 27 -5 31 80 74 80 41 77 40 93 24z m-1279 -34 c75 -37
+87 -57 53 -87 -17 -15 -23 -14 -94 20 -83 39 -98 56 -72 84 23 26 30 24 113
+-17z m2056 -243 c39 -16 111 -39 162 -52 81 -19 93 -25 103 -50 15 -36 7 -50
+-89 -158 -42 -47 -89 -107 -104 -133 -42 -72 -89 -86 -103 -32 -6 24 32 104
+83 172 13 17 20 32 15 32 -6 0 -63 -18 -128 -41 -190 -65 -400 -181 -573 -318
+-208 -165 -423 -412 -569 -654 l-64 -105 -34 20 -34 20 16 36 c32 78 160 268
+263 392 166 200 321 338 545 490 72 49 349 184 441 215 145 50 141 42 46 80
+-46 18 -88 39 -92 47 -19 30 -2 68 31 68 8 0 47 -13 85 -29z m2480 -92 c207
+-31 442 -118 638 -237 37 -22 67 -40 67 -39 0 1 -9 31 -20 65 -11 35 -20 79
+-20 98 0 28 4 35 27 40 36 9 54 -15 88 -116 14 -43 34 -89 44 -102 28 -36 61
+-105 61 -128 0 -12 -5 -30 -10 -41 -10 -17 -22 -19 -123 -19 -68 0 -136 -6
+-170 -15 -95 -25 -137 -17 -137 25 0 28 32 47 118 70 45 12 82 25 82 29 0 19
+-168 125 -253 161 -122 51 -353 113 -487 131 l-105 14 3 30 c6 61 6 62 197 34z
+m-4850 -60 c206 -54 378 -258 406 -481 14 -120 33 -177 94 -286 30 -53 55
+-109 55 -124 0 -40 -38 -77 -100 -98 l-55 -19 4 -129 c4 -149 -6 -179 -64
+-206 -20 -10 -62 -20 -93 -23 -78 -6 -110 -21 -128 -56 -21 -39 -6 -100 43
+-179 31 -51 35 -62 25 -83 l-12 -25 -432 2 -433 3 -3 37 c-5 63 13 93 187 312
+21 27 46 72 55 99 33 101 21 155 -93 414 -75 172 -95 256 -88 373 6 102 26
+163 78 246 51 80 120 144 200 185 121 62 223 73 354 38z m1083 -485 c18 -13
+22 -25 22 -73 0 -31 -5 -62 -12 -69 -9 -9 -68 -12 -204 -12 -224 0 -224 0
+-224 83 0 55 6 71 30 80 8 3 94 6 190 6 144 1 180 -2 198 -15z m6156 -554 c60
+-31 128 -105 144 -158 17 -56 15 -180 -4 -234 -17 -51 -80 -120 -134 -148 -55
+-27 -137 -43 -196 -37 -141 15 -260 133 -271 271 -12 145 68 272 204 322 60
+23 196 14 257 -16z m-3404 -315 l0 -175 -25 0 c-17 0 -25 6 -25 17 0 15 -2 15
+-19 -1 -25 -23 -84 -23 -117 -1 -31 20 -47 58 -45 108 1 49 15 73 54 97 41 25
+68 25 101 -1 l26 -20 0 75 c0 74 1 76 25 76 l25 0 0 -175z m520 0 l0 -175 -25
+0 c-17 0 -25 6 -25 17 0 14 -2 14 -20 -2 -12 -11 -35 -18 -62 -18 -114 0 -138
+178 -30 229 37 17 72 13 96 -12 15 -14 16 -9 16 60 0 74 1 76 25 76 l25 0 0
+-175z m-1211 146 c17 -17 20 -17 34 -4 17 17 32 11 48 -19 10 -19 9 -20 -12
+-15 -15 4 -30 0 -41 -10 -17 -16 -20 -15 -34 5 -27 38 -74 22 -74 -25 0 -16 6
+-23 20 -23 13 0 20 -7 20 -20 0 -13 -7 -20 -20 -20 -19 0 -20 -7 -20 -95 0
+-95 0 -95 -25 -95 -25 0 -25 0 -25 94 0 90 -1 95 -22 98 -31 4 -36 36 -6 40
+17 2 24 11 26 33 4 35 18 54 47 65 34 14 64 11 84 -9z m-256 -150 c31 -87 57
+-161 57 -165 0 -3 -13 -6 -28 -6 -24 0 -30 6 -42 43 -8 23 -18 41 -22 40 -5
+-2 -33 -3 -63 -3 l-54 0 -12 -40 c-11 -34 -16 -40 -41 -40 -15 0 -28 2 -28 5
+0 5 94 279 105 308 5 11 18 17 39 17 l31 0 58 -159z m677 129 c0 -27 -3 -30
+-30 -30 -27 0 -30 3 -30 30 0 27 3 30 30 30 27 0 30 -3 30 -30z m-161 -71 c44
+-15 51 -35 51 -138 0 -90 0 -91 -25 -91 -25 0 -25 1 -25 79 0 104 -24 133 -78
+95 -20 -13 -22 -24 -22 -95 l0 -80 -27 3 -28 3 -3 113 -3 112 31 0 c22 0 30
+-5 30 -17 0 -11 3 -14 8 -7 7 11 42 33 53 34 3 0 20 -5 38 -11z m658 -24 c20
+-23 23 -37 23 -116 0 -88 0 -89 -25 -89 -17 0 -25 6 -25 17 0 14 -2 14 -20 -2
+-31 -28 -89 -23 -117 10 -28 32 -29 69 -4 94 23 23 80 36 116 27 30 -8 32 7 5
+34 -24 24 -36 25 -71 6 -17 -9 -32 -10 -43 -4 -21 12 -12 26 28 44 45 21 106
+11 133 -21z m487 25 c30 -11 66 -65 66 -97 0 -22 -4 -23 -85 -23 -92 0 -102
+-8 -65 -48 24 -25 67 -29 95 -8 14 10 25 11 38 4 18 -9 18 -11 1 -29 -24 -27
+-77 -39 -117 -28 -102 28 -117 177 -23 223 36 18 55 20 90 6z m-1346 -112 l-3
+-113 -27 -3 -28 -3 0 115 0 116 30 0 31 0 -3 -112z m352 -3 l0 -115 -25 0 -25
+0 0 115 0 115 25 0 25 0 0 -115z m184 -176 c-20 -22 -54 -26 -54 -6 0 16 63
+48 69 35 1 -5 -5 -18 -15 -29z m3541 -139 c113 -39 229 -139 282 -244 35 -68
+63 -153 63 -188 l0 -28 -525 0 -526 0 7 38 c21 126 69 219 151 300 62 60 169
+118 257 138 81 18 213 11 291 -16z m-6795 -337 c0 -72 1 -75 18 -61 23 21 58
+31 82 23 35 -11 50 -57 50 -150 l0 -85 -28 0 c-28 0 -29 1 -24 53 6 79 -8 121
+-42 125 -46 6 -56 -12 -56 -99 l0 -79 -30 0 -30 0 0 175 0 175 30 0 30 0 0
+-77z m762 37 c5 -36 3 -40 -34 -40 -23 0 -28 4 -28 23 0 51 55 66 62 17z
+m-1980 10 c64 0 102 -32 102 -85 0 -31 -6 -43 -34 -66 l-33 -28 41 -68 42 -68
+-32 -3 c-18 -2 -34 0 -35 5 -2 5 -19 35 -39 66 -27 44 -41 57 -60 57 -23 0
+-24 -3 -24 -65 0 -63 -1 -65 -25 -65 l-25 0 0 166 0 167 38 -7 c20 -3 58 -6
+84 -6z m2998 -55 c0 -34 1 -35 41 -35 36 0 40 -2 37 -22 -2 -18 -10 -22 -42
+-22 l-40 -1 3 -65 c1 -35 5 -68 8 -73 3 -5 19 -7 35 -5 36 6 50 -18 23 -38
+-28 -21 -63 -17 -90 11 -22 21 -25 33 -25 95 0 68 -1 70 -25 70 -20 0 -25 5
+-25 25 0 20 5 25 25 25 21 0 25 5 25 29 0 16 6 32 13 34 29 12 37 6 37 -28z
+m-2667 -67 c15 -18 27 -44 27 -60 l0 -28 -91 0 c-89 0 -90 0 -84 -22 4 -13 14
+-29 23 -35 22 -17 73 -16 99 2 18 13 22 13 33 0 17 -21 -2 -42 -47 -54 -51
+-14 -89 -3 -123 36 -54 60 -36 158 35 189 46 21 95 10 128 -28z m236 27 c38
+-19 46 -42 20 -56 -16 -8 -23 -7 -33 6 -18 25 -66 22 -88 -5 -23 -28 -23 -88
+-1 -112 20 -22 70 -24 94 -2 18 16 59 12 59 -6 0 -12 -52 -48 -81 -55 -34 -9
+-99 15 -121 45 -25 34 -26 108 -3 144 35 52 99 70 154 41z m261 -13 c14 -10
+31 -38 39 -61 18 -55 0 -106 -49 -139 -83 -56 -193 24 -176 126 6 37 38 78 71
+93 28 12 85 3 115 -19z m238 22 c37 -10 52 -53 52 -149 l0 -85 -30 0 -29 0 -3
+88 -3 87 -28 3 c-47 6 -57 -12 -57 -99 l0 -79 -27 0 -28 0 3 115 3 115 26 0
+c18 0 24 -4 19 -15 -3 -8 -1 -15 4 -15 6 0 10 5 10 10 0 10 34 28 55 29 6 1
+20 -2 33 -5z m529 -27 c13 -13 26 -40 30 -60 l6 -37 -87 0 c-74 0 -86 -2 -86
+-17 0 -46 80 -72 114 -38 13 13 20 14 38 4 l22 -12 -27 -23 c-58 -49 -150 -36
+-182 26 -21 41 -22 103 0 136 36 56 127 67 172 21z m252 7 c37 -31 38 -38 7
+-52 -19 -8 -25 -8 -30 3 -9 23 -53 29 -81 11 -20 -13 -25 -25 -25 -61 0 -26 6
+-50 16 -59 20 -20 72 -21 94 -1 18 17 53 10 47 -9 -5 -17 -67 -56 -89 -56 -34
+0 -86 28 -104 55 -9 15 -17 45 -17 69 0 101 109 162 182 100z m360 1 c13 -13
+17 -13 30 -1 32 29 68 30 95 2 24 -23 26 -32 26 -121 0 -94 0 -95 -25 -95 -24
+0 -24 2 -27 88 l-3 87 -35 0 c-34 0 -35 -1 -41 -45 -4 -25 -6 -64 -5 -87 2
+-41 0 -43 -26 -43 l-27 0 -3 88 c-3 85 -4 87 -29 90 -40 5 -51 -19 -50 -103
+l1 -75 -30 0 -30 0 0 115 c0 115 0 115 24 115 13 0 26 -5 28 -11 2 -6 14 -5
+33 6 32 17 71 13 94 -10z m644 -7 c13 -16 17 -39 17 -114 0 -94 0 -94 -25 -94
+-25 0 -25 1 -25 78 0 85 -8 102 -50 102 -42 0 -50 -17 -50 -102 0 -77 0 -78
+-25 -78 l-25 0 0 115 0 115 25 0 c17 0 25 -6 25 -17 0 -14 2 -15 18 -1 37 33
+85 32 115 -4z m412 18 c41 -18 65 -61 65 -119 0 -35 -6 -49 -31 -75 -80 -82
+-203 -30 -201 84 0 54 22 91 65 109 41 18 60 18 102 1z m-1285 -111 l0 -115
+-30 0 -30 0 0 115 0 115 30 0 30 0 0 -115z m606 97 c26 -21 44 -54 44 -81 0
+-20 -6 -21 -85 -21 -77 0 -85 -2 -85 -19 0 -46 72 -68 114 -36 14 11 23 12 33
+4 21 -18 16 -27 -28 -50 -99 -50 -198 32 -169 140 6 23 22 48 38 60 34 26 108
+28 138 3z m5260 -348 c-9 -13 -23 -24 -31 -24 -19 0 -19 2 7 45 18 31 23 34
+30 20 7 -11 5 -24 -6 -41z m-1110 28 c29 -23 44 -54 44 -92 0 -65 -45 -100
+-130 -100 l-50 0 0 -60 c0 -57 -1 -60 -25 -60 l-25 0 0 165 0 165 83 0 c63 0
+87 -5 103 -18z m233 -86 c30 -16 51 -53 51 -91 0 -25 -1 -25 -85 -25 -83 0
+-84 0 -76 -22 4 -13 20 -30 34 -37 22 -13 29 -13 66 4 33 14 44 16 54 6 9 -10
+6 -18 -16 -37 -36 -30 -98 -32 -145 -4 -121 74 -9 271 117 206z m255 -7 c26
+-20 26 -22 10 -40 -17 -19 -18 -19 -40 2 -27 26 -69 23 -69 -5 0 -14 13 -24
+49 -36 122 -41 105 -140 -24 -140 -43 0 -99 38 -86 58 10 17 41 15 56 -4 17
+-19 74 -15 77 6 2 10 -19 26 -59 45 -56 26 -63 34 -66 61 -6 65 93 99 152 53z
+m209 10 c16 -9 22 -9 25 0 2 6 13 11 25 11 22 0 22 -2 22 -170 l0 -170 -25 0
+c-24 0 -25 1 -22 65 4 65 -4 79 -28 50 -7 -9 -29 -15 -52 -15 -32 0 -47 7 -74
+34 -28 28 -34 41 -34 78 1 52 16 83 56 109 33 21 75 25 107 8z m631 -10 c32
+-25 33 -37 4 -48 -17 -6 -26 -4 -36 10 -18 26 -72 26 -72 1 0 -13 15 -24 50
+-36 121 -43 111 -146 -14 -146 -43 0 -57 4 -77 26 -23 25 -24 26 -5 40 18 12
+22 12 41 -6 23 -21 51 -25 74 -11 20 13 5 30 -48 53 -61 26 -81 45 -81 79 0
+55 110 81 164 38z m220 10 c34 -16 46 -56 46 -150 0 -78 0 -79 -25 -79 -16 0
+-25 6 -25 16 0 14 -2 14 -22 0 -51 -36 -138 -3 -138 53 0 14 7 36 15 48 21 29
+90 48 122 34 28 -13 32 3 6 31 -19 21 -52 23 -78 4 -22 -16 -45 -11 -45 10 0
+37 90 57 144 33z m-674 -72 c0 -80 9 -97 50 -97 41 0 50 17 50 97 0 71 1 73
+25 73 l25 0 0 -116 c0 -114 0 -115 -22 -112 -13 2 -22 9 -20 16 3 15 2 15 -38
+-4 -42 -22 -77 -10 -107 35 -19 28 -23 47 -23 107 l0 74 30 0 30 0 0 -73z
+m248 -39 l-3 -113 -25 0 -25 0 -3 113 -3 112 31 0 31 0 -3 -112z m-6751 -353
+c34 -49 85 -117 113 -149 55 -63 58 -80 22 -104 -23 -15 -26 -13 -103 66 l-79
+80 0 -151 c0 -154 6 -218 41 -457 43 -285 201 -661 361 -853 26 -32 48 -62 48
+-66 0 -4 -14 -20 -31 -37 l-31 -29 -30 35 c-96 111 -255 399 -308 558 -88 265
+-139 577 -141 876 l-1 118 -77 -76 c-76 -76 -96 -87 -119 -64 -23 23 -11 49
+57 123 38 40 90 108 116 150 65 103 78 101 162 -20z m7009 -262 c-16 -184 -30
+-276 -61 -398 -43 -169 -75 -256 -141 -389 -62 -123 -82 -155 -206 -317 -48
+-64 -88 -121 -88 -127 0 -6 15 -6 44 0 23 5 74 8 112 6 68 -3 69 -3 72 -33 4
+-36 -18 -55 -65 -55 -19 0 -53 -4 -76 -10 -220 -50 -227 -51 -268 -40 -40 11
+-41 13 -34 43 27 129 35 198 29 260 -7 74 9 117 44 117 36 0 42 -21 42 -134
+l0 -109 26 24 c25 23 171 215 206 270 150 238 245 544 274 887 l7 82 44 0 45
+0 -6 -77z m-1724 -21 c79 -38 153 -115 194 -199 26 -52 28 -68 32 -200 l5
+-143 162 0 c150 0 163 -2 180 -20 15 -16 21 -52 32 -181 7 -89 24 -254 38
+-368 14 -113 39 -347 57 -519 30 -297 30 -315 15 -348 l-17 -34 -864 2 c-848
+3 -864 3 -886 23 -22 19 -22 25 -17 145 3 69 19 224 35 345 34 245 68 573 80
+768 12 184 8 181 193 187 l144 5 6 125 c9 198 64 310 191 391 73 47 126 59
+248 56 97 -2 112 -5 172 -35z m-3796 -313 c145 -36 280 -123 361 -232 91 -124
+152 -274 183 -454 23 -129 45 -181 119 -282 76 -105 76 -105 49 -159 -28 -57
+-80 -99 -149 -121 l-53 -18 -28 -154 c-16 -85 -36 -164 -44 -176 -14 -22 -21
+-23 -144 -23 -122 0 -130 -1 -141 -21 -6 -12 -9 -38 -5 -59 11 -73 23 -71
+-359 -68 l-340 3 -12 160 c-10 151 -13 165 -51 255 -21 52 -58 127 -81 165
+-66 113 -126 235 -152 310 -21 61 -24 89 -24 210 0 121 3 150 24 210 48 145
+149 279 269 358 105 70 180 97 332 121 45 6 173 -6 246 -25z m1689 -554 c91
+-24 161 -62 229 -125 71 -67 105 -123 136 -229 41 -133 18 -302 -55 -413 -31
+-47 -45 -25 139 -218 172 -180 173 -182 152 -215 -31 -47 -50 -34 -231 151
+-109 111 -175 172 -180 165 -11 -19 -76 -56 -136 -79 -171 -63 -361 -20 -510
+117 -103 94 -159 219 -159 356 0 141 45 249 147 351 127 127 307 180 468 139z
+m-530 -1284 c0 -34 -1 -35 -77 -60 -43 -14 -78 -28 -78 -32 0 -21 225 -117
+345 -147 163 -42 213 -47 477 -47 l256 0 5 -40 c2 -22 2 -42 0 -45 -3 -3 -104
+-6 -226 -8 -240 -4 -349 7 -540 54 -136 34 -315 105 -363 145 -19 16 -19 13
+21 -98 38 -103 39 -137 4 -148 -31 -10 -53 16 -84 106 -15 45 -43 102 -61 128
+-72 102 -86 129 -75 149 10 19 62 31 135 33 17 0 63 11 101 24 40 13 90 23
+115 22 44 -2 45 -3 45 -36z m3363 -173 c3 -24 0 -28 -23 -28 -27 0 -41 20 -31
+46 10 27 51 13 54 -18z m-1028 -193 l0 -175 -25 0 -25 0 0 169 c0 178 -1 173
+43 180 4 0 7 -78 7 -174z m-360 -5 l0 -170 -25 0 c-14 0 -25 5 -25 11 0 5 -10
+3 -22 -5 -31 -22 -74 -20 -114 5 -32 20 -42 38 -46 84 -4 51 4 76 33 104 25
+25 39 31 74 31 24 0 47 -4 50 -10 16 -25 25 -5 25 55 0 63 1 65 25 65 l25 0 0
+-170z m-270 124 c0 -20 -5 -24 -30 -24 -26 0 -30 4 -30 28 0 26 3 28 30 24 24
+-3 30 -9 30 -28z m764 11 c25 -38 20 -45 -35 -45 -48 0 -50 1 -43 23 16 52 51
+63 78 22z m-4555 -10 c36 -31 49 -64 30 -76 -24 -15 -37 -10 -51 19 -11 22
+-21 28 -56 30 -54 4 -85 -15 -98 -59 -13 -44 -3 -113 20 -138 40 -45 130 -32
+143 20 6 22 22 24 46 7 14 -11 15 -17 4 -37 -23 -45 -63 -66 -125 -66 -73 1
+-104 21 -137 90 -27 59 -26 92 6 157 29 58 62 78 130 78 47 0 63 -5 88 -25z
+m3711 0 c0 -24 -2 -25 -70 -25 l-70 0 0 -49 c0 -48 0 -48 30 -45 28 3 30 1 30
+-27 0 -29 -2 -31 -30 -27 l-30 5 0 -64 0 -63 -30 0 -30 0 0 160 0 160 100 0
+100 0 0 -25z m1800 -6 l0 -30 -92 3 c-81 3 -91 5 -94 22 -2 11 -1 23 2 28 3 4
+45 8 95 8 l89 0 0 -31z m-5226 -93 c32 -30 36 -39 36 -86 0 -45 -4 -56 -31
+-81 -58 -54 -127 -51 -178 7 -33 37 -42 95 -20 135 17 32 70 59 116 59 34 0
+48 -6 77 -34z m126 19 c0 -8 3 -15 6 -15 3 0 12 7 20 15 20 20 73 19 96 -2 17
+-15 19 -15 36 0 19 17 78 23 99 9 20 -13 29 -53 32 -139 l3 -83 -31 0 -31 0 0
+85 c0 93 -6 103 -55 91 -24 -6 -25 -9 -25 -91 l0 -85 -30 0 -29 0 -3 88 c-3
+82 -4 87 -26 90 -42 6 -52 -14 -52 -99 l0 -79 -30 0 -30 0 0 115 0 115 25 0
+c16 0 25 -6 25 -15z m390 5 c0 -7 6 -7 19 0 11 5 38 10 61 10 33 0 48 -6 71
+-29 25 -26 29 -37 29 -88 0 -61 -15 -91 -57 -112 -31 -16 -75 -14 -101 5 l-22
+15 0 -65 c0 -64 -1 -66 -25 -66 l-25 0 0 170 0 170 25 0 c14 0 25 -5 25 -10z
+m263 -8 c-4 -16 5 -15 23 3 9 8 26 15 40 15 19 0 24 -5 24 -25 0 -21 -5 -25
+-29 -25 -44 0 -56 -23 -56 -106 0 -70 -1 -74 -22 -74 -23 0 -23 2 -23 116 0
+114 0 115 23 112 12 -2 21 -9 20 -16z m298 -8 c21 -22 24 -37 27 -115 l4 -89
+-26 0 c-14 0 -26 5 -26 11 0 5 -10 3 -22 -5 -63 -44 -155 14 -133 83 12 38
+108 69 145 46 9 -6 10 -2 5 16 -13 41 -53 52 -92 24 -19 -14 -23 -13 -38 2
+-16 16 -16 18 5 35 15 12 39 18 74 18 43 0 57 -4 77 -26z m2419 -89 l0 -115
+-25 0 -25 0 0 115 0 115 25 0 25 0 0 -115z m521 86 c19 -20 29 -40 29 -60 l0
+-31 -72 -2 c-116 -2 -120 -4 -94 -43 13 -19 25 -25 54 -25 21 0 43 5 49 11 7
+7 23 9 40 4 l28 -7 -28 -24 c-95 -81 -233 2 -203 122 4 15 20 39 36 55 24 24
+37 29 80 29 44 0 56 -4 81 -29z m229 -86 l0 -115 -25 0 -25 0 0 115 0 115 25
+0 25 0 0 -115z m240 96 c0 -17 -101 -141 -122 -149 -4 -2 -8 -8 -8 -13 0 -5
+29 -9 65 -9 58 0 65 -2 65 -20 0 -19 -7 -20 -105 -20 -58 0 -105 3 -105 6 0
+17 29 56 83 112 l61 62 -67 0 c-65 0 -67 1 -67 25 l0 25 100 0 c91 0 100 -2
+100 -19z m206 -5 c26 -21 28 -30 32 -115 l4 -91 -26 0 c-14 0 -26 4 -26 9 0 5
+-14 3 -31 -6 -59 -29 -129 4 -129 62 0 49 30 70 101 70 32 0 59 2 59 5 0 3 -7
+16 -16 28 -17 24 -41 28 -78 11 -20 -9 -29 -9 -42 2 -15 12 -14 15 6 31 34 27
+112 24 146 -6z m261 -1 c27 -24 27 -25 9 -40 -17 -13 -21 -13 -36 0 -25 22
+-87 19 -100 -4 -14 -28 -13 -84 4 -106 18 -25 74 -24 95 2 13 16 21 18 39 10
+12 -6 22 -14 22 -18 0 -12 -51 -49 -67 -49 -8 0 -13 -6 -10 -12 2 -7 14 -12
+25 -10 27 4 28 -12 2 -38 -13 -13 -33 -20 -60 -20 -40 0 -53 13 -25 24 26 10
+16 35 -25 61 -49 31 -60 51 -60 110 0 40 5 52 34 81 29 29 41 34 79 34 35 0
+53 -6 74 -25z m228 19 c30 -12 45 -60 45 -144 0 -79 0 -80 -25 -80 -14 0 -25
+4 -25 9 0 6 -12 3 -27 -5 -36 -18 -57 -18 -93 1 -54 28 -49 104 7 126 16 6 47
+9 71 7 45 -3 54 9 26 36 -19 20 -53 20 -81 1 -18 -13 -22 -12 -37 4 -17 19
+-11 31 24 44 21 8 95 8 115 1z m291 -28 c30 -30 34 -40 34 -89 0 -49 -3 -58
+-30 -80 -105 -89 -253 15 -195 137 22 45 56 65 114 66 36 0 49 -6 77 -34z
+m-2948 -1304 l2 -322 -47 0 -48 0 0 318 0 317 30 6 c64 14 60 34 63 -319z
+m183 185 c-1 -75 1 -137 6 -137 4 0 22 15 41 33 30 29 39 32 92 32 68 0 105
+-21 132 -76 15 -28 18 -62 18 -196 l0 -163 -44 0 -45 0 -3 150 c-3 170 -11
+187 -85 197 -32 4 -45 1 -67 -19 -35 -30 -45 -78 -46 -220 l0 -108 -45 0 -46
+0 1 319 2 320 36 4 c20 2 41 3 46 2 4 0 7 -62 7 -138z m-3553 88 c43 -19 74
+-45 113 -99 44 -59 41 -66 -38 -90 -17 -5 -23 -3 -23 7 0 8 -17 34 -39 58
+l-39 44 -73 0 c-62 0 -80 -4 -107 -23 -117 -84 -101 -326 24 -378 80 -33 187
+-4 226 62 19 32 23 34 57 28 62 -11 64 -15 26 -71 -61 -91 -131 -129 -235
+-127 -36 0 -81 8 -101 16 -53 23 -117 84 -147 142 -23 44 -27 63 -27 141 0 73
+5 100 23 140 36 78 96 133 172 156 44 13 149 10 188 -6z m3174 -50 l-4 -45
+-44 0 -44 0 0 45 0 45 48 0 47 0 -3 -45z m-312 -50 l0 -65 70 0 70 0 0 -45 0
+-45 -70 0 -70 0 0 -114 c0 -91 3 -118 16 -130 18 -18 66 -21 95 -6 16 9 21 6
+32 -22 13 -32 13 -34 -14 -51 -35 -23 -103 -26 -146 -8 -18 7 -43 30 -55 49
+-20 32 -22 50 -23 159 l0 123 -37 0 -38 0 0 45 c0 45 0 45 34 45 l35 0 3 53
+c3 50 5 53 38 64 59 20 60 19 60 -52z m3350 0 l0 -65 70 0 70 0 0 -45 0 -45
+-70 0 -70 0 0 -120 c0 -108 2 -120 19 -130 25 -13 67 -13 91 0 15 8 20 5 29
+-23 13 -37 1 -51 -59 -67 -59 -16 -142 17 -160 64 -4 12 -10 80 -12 149 l-3
+127 -37 0 -38 0 0 44 c0 44 0 45 37 48 l37 3 1 49 c0 47 2 50 35 62 59 21 60
+20 60 -51z m-2041 -56 c60 -13 100 -44 122 -93 15 -34 19 -66 19 -193 l0 -153
+-45 0 c-41 0 -45 2 -45 25 0 31 -1 31 -45 1 -74 -51 -160 -43 -215 20 -24 28
+-30 44 -30 82 0 60 29 108 76 128 40 17 131 22 182 10 28 -7 32 -5 32 12 0 31
+-38 71 -74 77 -40 8 -112 -10 -123 -30 -7 -12 -15 -10 -46 12 -36 25 -37 27
+-20 46 25 27 71 50 118 58 22 3 42 7 45 8 3 0 25 -4 49 -10z m-3651 -15 c87
+-36 132 -109 132 -212 0 -62 -4 -75 -32 -118 -93 -138 -294 -129 -368 16 -93
+183 84 391 268 314z m294 -19 c-3 -21 0 -35 7 -35 6 0 11 4 11 10 0 5 17 21
+37 35 66 44 150 30 200 -35 10 -13 15 -12 40 11 15 15 38 32 50 38 31 16 99
+14 133 -4 54 -28 62 -61 66 -252 l2 -173 -44 0 -44 0 -1 108 c-1 143 -11 211
+-34 228 -31 23 -81 17 -116 -14 l-31 -27 -1 -145 -2 -145 -42 -3 -43 -3 0 141
+c0 178 -9 200 -83 200 -88 0 -107 -39 -107 -215 l0 -125 -45 0 -45 0 0 220 0
+220 48 0 48 0 -4 -35z m738 3 l0 -31 23 20 c35 33 62 43 113 43 122 0 220
+-129 196 -260 -15 -79 -54 -134 -117 -166 -65 -31 -117 -28 -177 12 l-38 24 0
+-115 0 -115 -45 0 -45 0 0 310 0 310 45 0 c44 0 45 -1 45 -32z m658 18 c36
+-19 78 -65 91 -99 6 -16 11 -96 11 -178 l0 -149 -45 0 c-42 0 -45 2 -45 25 l0
+26 -47 -28 c-84 -49 -199 -28 -231 42 -17 37 -15 112 5 141 36 55 143 82 241
+60 26 -6 32 -5 32 9 0 30 -21 56 -55 71 -46 19 -71 18 -121 -7 l-43 -20 -30
+22 c-30 22 -30 23 -13 42 34 38 84 56 155 57 40 0 79 -6 95 -14z m430 -38 l3
+-48 -41 0 c-92 0 -110 -34 -110 -210 l0 -130 -45 0 -45 0 0 215 0 215 51 0
+c49 0 51 -1 47 -25 -5 -25 5 -34 18 -14 13 21 69 49 94 47 22 -3 25 -8 28 -50z
+m1852 15 l0 -37 28 26 c40 38 65 48 118 48 41 0 51 -5 80 -36 l34 -35 40 32
+c81 65 198 44 227 -41 7 -21 12 -99 12 -197 l1 -163 -45 0 -45 0 0 135 c0 163
+-11 201 -62 210 -38 7 -76 -5 -100 -31 -13 -15 -18 -48 -22 -164 l-6 -145 -43
+0 -42 0 -2 135 c-3 166 -6 176 -44 195 -39 21 -82 12 -109 -22 -18 -23 -20
+-41 -20 -169 l0 -144 -45 0 -45 0 0 220 0 220 45 0 45 0 0 -37z m917 22 c73
+-31 113 -92 113 -175 l0 -50 -155 0 -155 0 0 -26 c0 -16 13 -39 34 -60 30 -30
+40 -34 89 -34 41 0 63 6 91 25 37 25 42 25 85 -3 34 -23 -39 -83 -124 -102
+-95 -21 -186 17 -241 100 -24 36 -26 46 -23 128 4 79 7 93 32 125 57 75 170
+107 254 72z m293 -22 l0 -37 28 26 c54 51 110 62 178 33 61 -25 74 -71 74
+-262 l0 -163 -45 0 -45 0 0 139 c0 77 -4 151 -10 165 -19 51 -113 51 -157 1
+-22 -24 -23 -35 -23 -166 l0 -139 -45 0 -45 0 0 220 0 220 45 0 45 0 0 -37z
+m1019 17 c104 -52 151 -189 102 -296 -34 -75 -128 -134 -216 -134 -69 0 -144
+56 -181 135 -39 82 -28 163 31 241 54 70 181 97 264 54z m-3549 -205 l0 -215
+-45 0 -45 0 0 215 0 215 45 0 45 0 0 -215z m-2030 -1004 c37 28 90 20 120 -18
+17 -22 20 -40 20 -129 l0 -104 -30 0 -30 0 0 95 c0 83 -2 96 -19 105 -29 15
+-49 12 -71 -10 -17 -17 -20 -33 -20 -105 l0 -85 -30 0 -30 0 0 199 0 200 28 3
+27 3 3 -88 3 -87 29 21z m850 95 c0 -32 -2 -34 -32 -33 -28 2 -31 5 -32 35 -1
+30 1 32 32 32 30 0 32 -2 32 -34z m-2228 15 c40 -16 68 -50 68 -82 0 -38 -24
+-85 -50 -99 -11 -6 -20 -15 -20 -20 0 -5 19 -40 41 -77 23 -38 43 -71 46 -75
+2 -5 -13 -8 -34 -8 -37 0 -39 3 -81 75 -38 68 -45 75 -73 75 l-31 0 4 -75 3
+-75 -32 0 -33 0 0 185 0 185 84 0 c47 0 95 -4 108 -9z m3388 -61 c0 -22 3 -39
+8 -39 4 1 24 1 45 0 33 -1 37 -4 37 -26 0 -23 -4 -25 -45 -25 l-45 0 0 -72 c0
+-89 7 -101 51 -96 28 2 35 -1 37 -19 2 -17 -3 -23 -27 -28 -39 -8 -86 2 -102
+22 -8 8 -15 53 -17 104 -4 86 -5 89 -28 89 -19 0 -24 5 -24 25 0 20 5 25 25
+25 22 0 25 4 25 34 0 34 9 44 43 45 13 1 17 -7 17 -39z m-3108 -40 c48 -14 88
+-61 88 -106 l0 -34 -100 0 c-110 0 -117 -5 -79 -54 26 -33 82 -36 115 -5 19
+18 25 19 43 7 25 -15 23 -26 -10 -50 -39 -29 -117 -33 -157 -9 -118 75 -82
+238 58 260 3 1 22 -4 42 -9z m338 -12 c41 -28 47 -44 21 -57 -16 -9 -27 -7
+-53 9 -43 26 -64 25 -93 -5 -19 -18 -25 -35 -25 -65 0 -78 74 -116 134 -69 25
+20 29 20 43 6 14 -14 14 -19 3 -32 -39 -47 -113 -57 -167 -24 -43 27 -63 66
+-63 124 0 108 113 171 200 113z m277 -3 c90 -59 80 -189 -19 -241 -52 -27
+-108 -13 -158 41 -33 36 -35 119 -4 162 44 59 123 76 181 38z m305 -4 c33 -29
+33 -30 36 -135 l4 -106 -31 0 -31 0 0 83 c0 120 -37 161 -95 102 -22 -22 -25
+-32 -25 -105 0 -79 0 -80 -25 -80 l-25 0 0 130 0 130 25 0 c19 0 25 -5 25 -21
+0 -20 1 -20 31 5 40 34 71 33 111 -3z m552 15 c44 -18 76 -61 76 -102 l0 -34
+-100 0 c-64 0 -100 -4 -100 -11 0 -15 21 -53 34 -61 22 -15 80 -8 100 11 18
+17 23 18 40 6 16 -12 17 -17 6 -30 -57 -68 -180 -54 -222 25 -51 96 10 202
+120 209 7 1 27 -5 46 -13z m307 -9 c41 -27 48 -53 19 -62 -15 -5 -26 -1 -35
+11 -17 24 -78 24 -105 -1 -28 -25 -27 -93 1 -129 26 -33 77 -36 104 -6 22 24
+38 25 56 4 11 -14 10 -20 -14 -40 -55 -47 -130 -43 -183 10 -55 55 -57 127 -7
+187 46 54 108 64 164 26z m277 -5 l3 -22 18 22 c25 30 82 30 114 0 23 -22 24
+-22 41 -3 26 28 69 35 105 17 38 -20 51 -63 51 -173 l0 -83 -30 0 -30 0 0 93
+c0 59 -4 97 -12 105 -16 16 -50 15 -74 -2 -16 -12 -19 -27 -19 -105 l0 -91
+-32 0 -33 0 0 93 c0 97 -7 117 -44 117 -43 0 -56 -27 -56 -122 0 -87 0 -88
+-25 -88 l-25 0 0 136 c0 135 0 135 23 132 14 -2 23 -11 25 -26z m584 2 c24
+-22 48 -74 48 -104 0 -19 -6 -20 -100 -20 -93 0 -100 -1 -100 -20 0 -54 96
+-83 135 -40 17 19 19 19 37 4 26 -24 23 -31 -22 -54 -77 -39 -159 -16 -191 54
+-10 23 -19 52 -19 65 0 42 38 108 73 125 40 21 110 15 139 -10z m267 15 c48
+-17 61 -53 61 -164 l0 -95 -30 0 -30 0 0 85 c0 72 -3 88 -20 105 -25 25 -41
+25 -74 -1 -24 -19 -26 -26 -26 -105 0 -83 0 -84 -25 -84 l-25 0 0 130 0 130
+25 0 c19 0 25 -5 25 -22 1 -20 2 -21 13 -7 14 18 47 38 63 39 6 0 25 -5 43
+-11z m495 -3 c50 -21 86 -74 86 -127 0 -82 -57 -139 -140 -139 -108 0 -168
+162 -88 238 45 41 89 50 142 28z m-1464 -126 l0 -130 -27 0 -28 0 3 130 3 130
+25 0 24 0 0 -130z m3390 -595 c0 -32 -2 -35 -30 -35 -26 0 -30 3 -30 29 0 29
+10 39 43 40 13 1 17 -7 17 -34z m310 -155 l0 -190 -30 0 c-22 0 -28 4 -24 15
+8 21 -3 19 -28 -5 -27 -25 -80 -26 -119 -3 -41 25 -62 75 -56 136 4 42 10 56
+41 84 43 40 99 45 134 13 12 -11 23 -20 25 -20 1 0 1 29 -1 65 -5 79 0 95 33
+95 l25 0 0 -190z m590 0 l0 -190 -30 0 c-22 0 -28 4 -24 15 8 20 -3 19 -33 -5
+-32 -25 -79 -25 -117 -1 -41 27 -55 57 -56 120 0 49 3 57 39 92 32 32 46 39
+78 39 21 0 49 -7 61 -16 l22 -15 0 75 0 76 30 0 30 0 0 -190z m-1367 160 c13
+-18 16 -19 27 -5 17 20 33 19 55 -5 22 -24 12 -39 -15 -22 -17 10 -22 9 -32
+-8 -17 -26 -26 -25 -54 5 -33 36 -68 22 -72 -29 -3 -34 -2 -36 27 -36 24 0 31
+-4 31 -20 0 -16 -7 -20 -30 -20 l-30 0 0 -105 0 -105 -30 0 -30 0 0 105 0 105
+-26 0 c-21 0 -25 4 -22 23 2 14 10 22 23 22 14 0 21 9 26 33 11 53 45 82 95
+82 32 0 47 -5 57 -20z m-333 -47 c12 -32 42 -113 66 -180 l43 -123 -33 0 c-31
+0 -34 3 -46 45 l-13 45 -72 0 -73 0 -14 -42 c-13 -38 -19 -43 -48 -46 -24 -3
+-31 0 -28 10 10 26 77 214 100 281 23 66 23 67 60 67 35 0 37 -2 58 -57z
+m-470 -30 c0 -9 -52 -69 -115 -134 -63 -64 -115 -122 -115 -128 0 -27 -49 -6
+-104 45 l-60 55 28 27 27 27 40 -45 39 -45 107 108 c74 73 115 107 130 107 15
+0 23 -6 23 -17z m860 -149 l0 -124 -25 0 -25 0 0 124 c0 110 2 125 18 129 9 2
+20 2 25 0 4 -2 7 -60 7 -129z m120 115 l0 -20 26 20 c37 29 82 27 116 -6 27
+-26 28 -30 28 -130 l0 -103 -27 0 -28 0 3 72 c3 90 -11 122 -55 126 -47 5 -63
+-25 -63 -120 0 -77 0 -78 -25 -78 l-25 0 0 130 0 130 25 0 c19 0 25 -5 25 -21z
+m280 -109 l0 -130 -25 0 -25 0 0 124 c0 129 0 128 43 135 4 0 7 -57 7 -129z
+m562 101 c33 -29 33 -31 36 -130 l4 -101 -31 0 c-17 0 -31 5 -31 10 0 6 -11 3
+-25 -6 -18 -12 -38 -15 -68 -11 -79 11 -103 83 -47 139 28 28 35 30 85 26 46
+-4 55 -2 55 12 0 9 -5 21 -12 28 -16 16 -73 15 -98 0 -16 -10 -23 -10 -36 3
+-14 15 -13 18 12 38 42 33 114 29 156 -8z m607 -6 c22 -25 31 -46 31 -70 l0
+-35 -96 0 c-94 0 -95 0 -89 -22 17 -60 77 -78 134 -41 21 14 25 13 40 -2 15
+-15 14 -18 -7 -35 -51 -42 -141 -38 -185 8 -37 38 -49 86 -36 134 17 63 62 96
+135 97 36 1 47 -4 73 -34z"
+                                />
+                                <path
+                                    d="M4882 13724 c-75 -52 -67 -200 13 -238 106 -51 204 39 174 160 -17
+66 -51 94 -113 94 -31 0 -61 -6 -74 -16z"
+                                />
+                                <path
+                                    d="M6293 13739 c-17 -5 -43 -23 -57 -40 -21 -25 -26 -41 -26 -85 0 -91
+44 -144 120 -144 76 0 120 53 120 145 0 49 -4 59 -32 89 -36 38 -76 49 -125
+35z"
+                                />
+                                <path
+                                    d="M4344 13798 c-12 -35 -31 -87 -42 -115 l-22 -53 85 0 84 0 -13 43
+c-45 142 -61 187 -66 187 -3 0 -15 -28 -26 -62z"
+                                />
+                                <path
+                                    d="M2165 13710 c-23 -24 -29 -41 -33 -87 -3 -49 0 -64 20 -93 43 -64
+113 -76 172 -29 54 42 57 160 5 211 -23 24 -36 28 -81 28 -47 0 -58 -4 -83
+-30z"
+                                />
+                                <path
+                                    d="M3552 13564 c-28 -20 -30 -69 -3 -84 38 -20 107 -12 140 16 34 28 41
+68 15 78 -32 12 -129 6 -152 -10z"
+                                />
+                                <path
+                                    d="M6799 13569 c-29 -11 -52 -50 -43 -74 18 -46 169 -30 188 20 15 41 7
+52 -40 59 -58 8 -72 7 -105 -5z"
+                                />
+                                <path
+                                    d="M7302 13735 c-55 -24 -77 -104 -47 -170 25 -51 99 -72 153 -41 85 47
+82 191 -6 215 -48 14 -60 13 -100 -4z"
+                                />
+                                <path
+                                    d="M5391 13714 c-90 -75 -43 -228 73 -241 43 -5 48 -3 86 35 38 38 40
+43 40 102 0 57 -3 65 -34 96 -30 30 -40 34 -84 34 -40 0 -57 -6 -81 -26z"
+                                />
+                                <path
+                                    d="M7818 13734 c-24 -13 -48 -42 -48 -58 0 -3 52 -6 115 -6 75 0 115 4
+115 11 0 6 -13 24 -29 40 -25 24 -37 29 -78 29 -26 -1 -60 -7 -75 -16z"
+                                />
+                                <path
+                                    d="M3911 12674 c-51 -36 -65 -125 -30 -184 30 -48 48 -59 95 -60 41 0
+71 22 102 77 27 50 9 123 -42 165 -27 22 -94 23 -125 2z"
+                                />
+                                <path
+                                    d="M5204 12656 c-31 -31 -34 -39 -34 -95 0 -53 4 -64 31 -96 27 -30 37
+-35 76 -35 36 0 50 6 73 28 55 55 52 150 -6 201 -49 44 -95 42 -140 -3z"
+                                />
+                                <path
+                                    d="M5941 12674 c-54 -45 -43 -54 69 -54 55 0 100 3 100 6 0 17 -24 46
+-50 59 -43 22 -84 19 -119 -11z"
+                                />
+                                <path
+                                    d="M6823 12515 c-36 -15 -49 -45 -33 -75 13 -25 82 -28 135 -6 43 18 58
+62 30 83 -24 17 -91 16 -132 -2z"
+                                />
+                                <path
+                                    d="M4815 11135 c-56 -33 -88 -85 -93 -150 -8 -93 6 -115 181 -293 132
+-133 165 -161 181 -156 34 11 314 294 336 340 65 133 -33 284 -183 284 -49 0
+-114 -36 -139 -77 l-15 -25 -22 31 c-51 71 -169 94 -246 46z"
+                                />
+                                <path
+                                    d="M8600 11084 c-356 -156 -329 -147 -466 -154 -81 -3 -126 -10 -137
+-19 -14 -11 -17 -36 -17 -161 0 -165 -2 -160 74 -160 23 0 47 -5 54 -12 8 -8
+12 -51 12 -129 0 -65 3 -124 6 -133 5 -13 23 -16 89 -16 113 0 115 2 115 140
+0 101 2 110 21 121 17 9 32 6 78 -15 455 -205 434 -197 451 -181 13 14 15 67
+15 393 0 345 -2 380 -18 405 -9 15 -23 27 -30 26 -6 -1 -118 -48 -247 -105z"
+                                />
+                                <path
+                                    d="M5166 9518 c-22 -31 -20 -84 4 -108 43 -43 110 -10 110 55 0 67 -79
+103 -114 53z"
+                                />
+                                <path
+                                    d="M5686 9518 c-36 -51 -9 -128 45 -128 39 0 69 32 69 73 0 48 -24 77
+-65 77 -24 0 -39 -7 -49 -22z"
+                                />
+                                <path
+                                    d="M4285 9585 c-4 -11 -13 -37 -21 -58 -8 -20 -14 -40 -14 -42 0 -3 18
+-5 40 -5 46 0 48 5 21 75 -16 41 -21 46 -26 30z"
+                                />
+                                <path
+                                    d="M5450 9451 c-18 -5 -25 -14 -25 -31 0 -21 6 -26 31 -28 20 -2 39 4
+55 17 24 21 24 21 5 36 -21 16 -28 17 -66 6z"
+                                />
+                                <path d="M5958 9528 l-23 -23 59 -3 c69 -4 79 3 47 29 -31 25 -56 24 -83 -3z" />
+                                <path
+                                    d="M690 8776 l0 -46 43 0 c59 0 79 16 69 55 -8 28 -12 30 -60 33 l-52 3
+0 -45z"
+                                />
+                                <path
+                                    d="M967 8712 c-10 -10 -17 -22 -17 -25 0 -4 27 -7 60 -7 64 0 66 1 50
+31 -14 25 -71 26 -93 1z"
+                                />
+                                <path
+                                    d="M1475 8705 c-14 -13 -25 -35 -25 -48 0 -37 36 -77 70 -77 33 0 70 40
+70 75 0 33 -37 75 -66 75 -14 0 -36 -11 -49 -25z"
+                                />
+                                <path
+                                    d="M2241 8718 c-28 -30 -18 -38 45 -38 60 0 72 16 32 44 -31 22 -54 20
+-77 -6z"
+                                />
+                                <path
+                                    d="M3927 8712 c-23 -26 -22 -94 1 -115 21 -19 54 -22 82 -7 37 20 34
+107 -4 132 -20 14 -63 8 -79 -10z"
+                                />
+                                <path
+                                    d="M3236 8714 c-27 -27 -18 -34 44 -34 63 0 71 7 42 33 -23 21 -66 22
+-86 1z"
+                                />
+                                <path
+                                    d="M7360 8345 l0 -55 43 0 c54 0 80 18 80 55 0 37 -26 55 -80 55 l-43 0
+0 -55z"
+                                />
+                                <path
+                                    d="M7639 8301 c-32 -26 -22 -33 44 -29 50 3 54 5 43 20 -20 28 -59 32
+-87 9z"
+                                />
+                                <path
+                                    d="M8109 8299 c-16 -16 -19 -30 -17 -67 3 -40 7 -49 32 -61 74 -35 127
+68 66 129 -26 26 -55 25 -81 -1z"
+                                />
+                                <path
+                                    d="M8962 8219 c-26 -8 -33 -14 -30 -32 2 -15 11 -23 30 -25 39 -5 70 15
+66 41 -4 25 -20 29 -66 16z"
+                                />
+                                <path
+                                    d="M6845 7476 c-56 -26 -117 -88 -140 -142 -11 -26 -15 -71 -15 -155 l0
+-119 276 0 276 0 -4 128 c-4 145 -17 182 -87 245 -75 67 -212 87 -306 43z"
+                                />
+                                <path
+                                    d="M6635 6696 c-91 -42 -135 -114 -135 -220 0 -51 6 -74 28 -115 32 -60
+394 -431 420 -431 29 0 415 387 440 441 29 60 30 155 3 208 -45 87 -135 141
+-236 141 -62 0 -141 -44 -175 -97 l-28 -43 -20 33 c-57 97 -189 134 -297 83z"
+                                />
+                                <path
+                                    d="M3010 6995 c-95 -31 -196 -135 -221 -228 -18 -68 -7 -204 21 -262 83
+-171 287 -239 473 -158 l38 17 94 -94 c81 -80 96 -92 118 -86 33 8 57 32 57
+58 0 13 -37 58 -96 118 l-95 97 25 37 c30 45 40 103 34 204 -6 92 -29 144 -94
+209 -63 63 -136 94 -232 99 -51 3 -92 -1 -122 -11z m209 -134 c83 -43 129
+-130 118 -223 -15 -120 -98 -198 -212 -198 -126 0 -209 76 -222 206 -10 91 36
+172 122 217 44 23 146 22 194 -2z"
+                                />
+                                <path
+                                    d="M4798 6617 c-113 -48 -203 -135 -245 -237 -13 -32 -18 -71 -18 -135
+0 -83 3 -96 37 -166 150 -307 583 -301 726 9 48 106 32 276 -37 375 -42 62
+-105 115 -170 145 -83 38 -214 42 -293 9z"
+                                />
+                                <path
+                                    d="M6326 5074 c-18 -18 -21 -76 -6 -105 14 -26 80 -26 103 -1 21 23 22
+71 1 100 -18 26 -74 30 -98 6z"
+                                />
+                                <path
+                                    d="M2574 5056 c-21 -42 -9 -85 29 -106 24 -13 30 -13 55 0 23 13 27 23
+30 64 4 59 -9 76 -59 76 -35 0 -41 -4 -55 -34z"
+                                />
+                                <path
+                                    d="M3250 5080 c-31 -31 -27 -93 6 -119 15 -12 32 -21 39 -21 7 0 24 9
+39 21 20 15 26 29 26 57 0 43 -7 55 -37 71 -31 16 -50 14 -73 -9z"
+                                />
+                                <path
+                                    d="M3678 4999 c-28 -16 -22 -48 9 -55 34 -9 78 15 78 41 0 16 -8 21 -35
+22 -19 2 -43 -2 -52 -8z"
+                                />
+                                <path
+                                    d="M6607 5082 c-10 -10 -17 -20 -17 -23 0 -2 25 -4 55 -4 55 0 67 9 43
+33 -18 18 -63 14 -81 -6z"
+                                />
+                                <path
+                                    d="M7293 5003 c-21 -8 -15 -43 10 -54 43 -19 113 28 76 52 -15 9 -66 11
+-86 2z"
+                                />
+                                <path
+                                    d="M7793 5003 c-20 -8 -16 -51 6 -58 43 -13 104 26 86 55 -6 10 -70 12
+-92 3z"
+                                />
+                                <path
+                                    d="M8050 5071 c-18 -34 -12 -99 9 -111 29 -15 77 -12 91 5 16 19 15 92
+-1 111 -18 22 -86 18 -99 -5z"
+                                />
+                                <path
+                                    d="M5930 3667 c-32 -11 -35 -15 -35 -52 0 -34 4 -42 28 -53 60 -29 167
+21 167 77 0 35 -91 51 -160 28z"
+                                />
+                                <path
+                                    d="M2224 3796 c-33 -33 -41 -60 -35 -125 6 -66 58 -111 127 -111 77 0
+134 105 104 194 -17 52 -53 76 -112 76 -43 0 -54 -4 -84 -34z"
+                                />
+                                <path
+                                    d="M3468 3810 c-36 -28 -51 -72 -46 -131 11 -112 131 -158 209 -79 26
+26 29 35 29 95 0 63 -2 69 -34 101 -30 30 -41 34 -84 34 -34 0 -57 -6 -74 -20z"
+                                />
+                                <path
+                                    d="M3947 3670 c-42 -13 -57 -29 -57 -61 0 -52 64 -74 133 -46 38 16 53
+33 62 68 4 18 2 28 -8 32 -30 12 -103 16 -130 7z"
+                                />
+                                <path
+                                    d="M7166 3829 c-40 -6 -76 -38 -76 -65 0 -11 23 -14 110 -14 61 0 110 4
+110 9 0 5 -11 23 -25 39 -27 33 -59 41 -119 31z"
+                                />
+                                <path
+                                    d="M8418 3810 c-37 -28 -51 -72 -46 -137 4 -48 10 -61 37 -85 36 -32 93
+-38 141 -13 76 39 86 173 18 230 -38 32 -113 35 -150 5z"
+                                />
+                                <path
+                                    d="M1502 2708 l3 -63 54 0 c58 1 81 18 81 62 0 40 -34 63 -90 63 l-51 0
+3 -62z"
+                                />
+                                <path
+                                    d="M1822 2633 l-27 -28 37 -3 c21 -2 57 -2 80 0 l43 3 -27 28 c-16 15
+-38 27 -53 27 -15 0 -37 -12 -53 -27z"
+                                />
+                                <path
+                                    d="M2427 2653 c-23 -6 -47 -54 -47 -93 0 -38 39 -80 75 -80 65 0 104
+104 57 152 -19 19 -58 29 -85 21z"
+                                />
+                                <path
+                                    d="M3288 2643 c-34 -41 -32 -43 41 -43 55 0 71 3 71 14 0 39 -84 60
+-112 29z"
+                                />
+                                <path
+                                    d="M4422 2637 c-12 -13 -22 -26 -22 -30 0 -4 32 -7 70 -7 75 0 88 11 52
+43 -27 24 -74 21 -100 -6z"
+                                />
+                                <path
+                                    d="M5232 2650 c-46 -19 -57 -106 -17 -145 42 -43 104 -30 124 25 27 78
+-36 149 -107 120z"
+                                />
+                                <path
+                                    d="M7365 1815 c-53 -52 -18 -145 54 -145 51 0 71 24 71 83 0 35 -5 51
+-22 67 -30 27 -73 26 -103 -5z"
+                                />
+                                <path
+                                    d="M7951 1814 c-52 -66 9 -181 77 -145 40 22 55 49 49 93 -10 75 -84
+106 -126 52z"
+                                />
+                                <path
+                                    d="M6360 1854 c-13 -38 -25 -75 -28 -81 -3 -10 11 -13 52 -13 31 0 56 1
+56 3 0 2 -13 38 -29 82 l-28 78 -23 -69z"
+                                />
+                                <path
+                                    d="M7661 1726 c-33 -40 22 -80 75 -55 20 10 29 22 29 39 0 23 -4 25 -46
+28 -31 2 -50 -2 -58 -12z"
+                                />
+                                <path
+                                    d="M8277 1830 c-15 -12 -27 -26 -27 -31 0 -5 29 -9 65 -9 67 0 74 4 53
+33 -22 27 -61 31 -91 7z"
+                                />
+                            </g>
+                        </svg>
+
+                        <div class="p-8 md:p-10">
+                            <h3 class="text-2xl font-semibold text-texto-branco mb-4">Por que somos diferentes?</h3>
+                            <p class="text-texto-cinza mb-6">
+                                A maioria das agências entrega apenas contatos e considera o trabalho finalizado. Nós atuamos como parceiros estratégicos, entendendo que o sucesso se constrói na gestão de todo o ciclo de vida do cliente.
+                            </p>
+
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-6 w-6 bg-dourado rounded-full flex items-center justify-center text-azul-profundo font-bold mr-3 mt-1">✓</div>
+                                    <span class="text-texto-cinza">Gerenciamos todas as etapas: da prospecção ética à fidelização e identificação de novas oportunidades na carteira de clientes.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-6 w-6 bg-dourado rounded-full flex items-center justify-center text-azul-profundo font-bold mr-3 mt-1">✓</div>
+                                    <span class="text-texto-cinza">Estruturamos uma comunicação estratégica, nutrindo o relacionamento com informações sobre o andamento de processos e conteúdos de valor.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-6 w-6 bg-dourado rounded-full flex items-center justify-center text-azul-profundo font-bold mr-3 mt-1">✓</div>
+                                    <span class="text-texto-cinza">Analisamos o Custo de Aquisição de Cliente (CAC) e o LTV para otimizar seus investimentos em marketing e garantir o máximo retorno.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-6 w-6 bg-dourado rounded-full flex items-center justify-center text-azul-profundo font-bold mr-3 mt-1">✓</div>
+                                    <span class="text-texto-cinza">Somos parceiros de negócio, não apenas prestadores de serviço.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-16 md:py-24 bg-azul-profundo text-texto-branco">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para Elevar o Nível da Sua Advocacia?</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto text-texto-cinza">
+                    Agende uma sessão estratégica gratuita e descubra como podemos aplicar nossa metodologia para construir um escritório mais sólido, rentável e com autoridade no mercado.
+                </p>
+                <a href="https://wa.me/558491259602" rel="noopener noreferrer" target="_blank" class="bg-dourado hover:bg-dourado-hover transition-all text-azul-profundo font-bold py-3 px-8 rounded-full inline-block text-lg">
+                    Agendar Sessão Estratégica
+                </a>
+            </div>
+        </section>
+
+        <footer class="bg-azul-profundo text-texto-cinza py-8 border-t border-dourado/[.2]">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                    <div class="mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold mb-2 text-texto-branco">Advocacia de Resultado</h3>
+                        <p>Estratégia e Gestão para Escritórios de Advocacia</p>
+                    </div>
+                    <div class="text-sm">
+                        © 2025 Advocacia de Resultado. Todos os direitos reservados.
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Script para suavizar a rolagem para âncoras
+            document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth",
+                    });
                 });
             });
-        });
-    </script>
-</body>
+        </script>
+    </body>
 </html>
