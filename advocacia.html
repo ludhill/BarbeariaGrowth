@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing e Gestão para Advocacia - Alcance a Excelência Jurídica</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>  
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Nova paleta de cores adaptada
+                        'azul-profundo': '#1A193B',   // Cor de fundo principal
+                        'dourado': '#D4A24E',         // Cor de destaque para títulos, logo e CTAs
+                        'dourado-hover': '#EAC478',    // Variação mais clara para links e efeitos hover
+                        'texto-branco': '#FFFFFF',      // Cor principal dos textos e ícones
+                        'texto-cinza': '#E5E7EB'       // Um tom de cinza claro para textos secundários
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Estilos personalizados adicionais */
+        .hero-image {
+            /* SUGESTÃO: Manter uma imagem adequada ao tema jurídico, como um escritório moderno. */
+            background: linear-gradient(rgba(26, 25, 59, 0.8), rgba(26, 25, 59, 0.8)), url('https://images.unsplash.com/photo-1589216532372-1c2a36790049?q=80&w=2070&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+        }
+        
+        .benefit-card {
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(212, 162, 78, 0.5); /* Dourado com 50% de opacidade */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body class="font-poppins antialiased bg-azul-profundo text-texto-cinza">
+
+    <section class="hero-image flex items-center justify-center text-texto-branco">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Advocacia de Resultado: Gestão e Marketing</h1>
+            <h2 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-8">Transforme seu escritório em uma referência de mercado, com previsibilidade e crescimento sustentável</h2>
+            <a href="#contato" class="bg-dourado hover:bg-dourado-hover transition-all text-azul-profundo font-bold py-3 px-8 rounded-full inline-block">
+                Quero alavancar meu escritório
+            </a>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-texto-branco mb-6">Nosso Diferencial</h2>
+                <p class="text-lg text-texto-cinza mb-8">Enquanto a maioria das agências de marketing jurídico se concentra apenas em atrair contatos, nós implementamos uma gestão completa da jornada do seu cliente. Do primeiro contato à fidelização e à expansão dos serviços contratados, garantindo um crescimento sólido e ético para o seu escritório.</p>
+                <div class="flex justify-center">
+                    <img src="ticket.gif" alt="Comparação entre abordagem tradicional de marketing e nossa gestão de ciclo completo do cliente" class="rounded-lg shadow-lg" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-azul-profundo">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-texto-branco mb-12">O Que Oferecemos Para Sua Advocacia</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
+                    <div class="text-4xl mb-4">⚖️</div>
+                    <h3 class="text-xl font-semibold text-texto-branco mb-3">Construção de Autoridade</h3>
+                    <p class="text-texto-cinza text-justify">Fortalecemos a percepção de valor do seu escritório, convertendo expertise jurídica em autoridade de mercado, o que aumenta a confiança e a retenção de clientes.</p>
+                </div>
+                
+                <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
+                    <div class="text-4xl mb-4">📂</div>
+                    <h3 class="text-xl font-semibold text-texto-branco mb-3">Portfólio de Serviços Estratégico</h3>
+                    <p class="text-texto-cinza text-justify">Além da captação ética, estruturamos seu portfólio de serviços para identificar oportunidades de cross-selling e up-selling, aumentando o LTV (Lifetime Value) de cada cliente.</p>
+                </div>
+                
+                <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-semibold text-texto-branco mb-3">Marketing Jurídico de Conteúdo</h3>
+                    <p class="text-texto-cinza text-justify">Desenvolvemos estratégias de conteúdo que posicionam você como autoridade, gerando um fluxo constante de consultas qualificadas e respeitando o Código de Ética da OAB.</p>
+                </div>
+                
+                <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
+                    <div class="text-4xl mb-4">👥</div>
+                    <h3 class="text-xl font-semibold text-texto-branco mb-3">Gestão do Relacionamento com Cliente</h3>
+                    <p class="text-texto-cinza text-justify">Implementamos sistemas de CRM para um acompanhamento proativo de casos e clientes, automatizando comunicações importantes e fortalecendo a relação de confiança.</p>
+                </div>
+                
+                <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
+                    <div class="text-4xl mb-4">💲</div>
+                    <h3 class="text-xl font-semibold text-texto-branco mb-3">Previsibilidade de Honorários</h3>
+                    <p class="text-texto-cinza text-justify">Com nossa metodologia, seu escritório passa a ter uma receita mais previsível, permitindo um planejamento financeiro seguro e um crescimento escalável e sustentável.</p>
+                </div>
+                
+                <div class="border border-dourado/[.2] p-8 rounded-xl shadow-md benefit-card">
+                    <div class="text-4xl mb-4">🖥️</div>
+                    <h3 class="text-xl font-semibold text-texto-branco mb-3">BI Jurídico e Métricas</h3>
+                    <p class="text-texto-cinza text-justify">Tenha acesso a um dashboard com os KPIs (Key Performance Indicators) essenciais do seu escritório, facilitando a tomada de decisões estratégicas baseadas em dados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-texto-branco mb-12">Nossa Abordagem Completa</h2>
+                
+                <div class="bg-azul-profundo border border-dourado/[.2] rounded-xl shadow-lg overflow-hidden">
+                    <img src="ciclo.gif" alt="Processo completo de gestão da jornada do cliente jurídico" class="w-full" loading="lazy">
+                    
+                    <div class="p-8 md:p-10">
+                        <h3 class="text-2xl font-semibold text-texto-branco mb-4">Por que somos diferentes?</h3>
+                        <p class="text-texto-cinza mb-6">A maioria das agências entrega apenas contatos e considera o trabalho finalizado. Nós atuamos como parceiros estratégicos, entendendo que o sucesso se constrói na gestão de todo o ciclo de vida do cliente.</p>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 bg-dourado rounded-full flex items-center justify-center text-azul-profundo font-bold mr-3 mt-1">✓</div>
+                                <span class="text-texto-cinza">Gerenciamos todas as etapas: da prospecção ética à fidelização e identificação de novas oportunidades na carteira de clientes.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 bg-dourado rounded-full flex items-center justify-center text-azul-profundo font-bold mr-3 mt-1">✓</div>
+                                <span class="text-texto-cinza">Estruturamos uma comunicação estratégica, nutrindo o relacionamento com informações sobre o andamento de processos e conteúdos de valor.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 bg-dourado rounded-full flex items-center justify-center text-azul-profundo font-bold mr-3 mt-1">✓</div>
+                                <span class="text-texto-cinza">Analisamos o Custo de Aquisição de Cliente (CAC) e o LTV para otimizar seus investimentos em marketing e garantir o máximo retorno.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 h-6 w-6 bg-dourado rounded-full flex items-center justify-center text-azul-profundo font-bold mr-3 mt-1">✓</div>
+                                <span class="text-texto-cinza">Somos parceiros de negócio, não apenas prestadores de serviço.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-16 md:py-24 bg-azul-profundo text-texto-branco">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para Elevar o Nível da Sua Advocacia?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto text-texto-cinza">Agende uma sessão estratégica gratuita e descubra como podemos aplicar nossa metodologia para construir um escritório mais sólido, rentável e com autoridade no mercado.</p>
+            <a href="https://wa.me/558491259602" rel="noopener noreferrer" target="_blank" class="bg-dourado hover:bg-dourado-hover transition-all text-azul-profundo font-bold py-3 px-8 rounded-full inline-block text-lg">
+                Agendar Sessão Estratégica
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-azul-profundo text-texto-cinza py-8 border-t border-dourado/[.2]">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2 text-texto-branco">Advocacia de Resultado</h3>
+                    <p>Estratégia e Gestão para Escritórios de Advocacia</p>
+                </div>
+                <div class="text-sm">
+                    © 2025 Advocacia de Resultado. Todos os direitos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script para suavizar a rolagem para âncoras
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
